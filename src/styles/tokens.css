@@ -1,0 +1,47 @@
+:root,
+body.connect-light {
+  --color-background-fill-0: #f5f5f5;
+  --color-background-fill-1: #ffffff;
+  --color-background-fill-2: #e8e8e8;
+  --color-background-border-2: #dcdcdc;
+  --color-content-caption: #6b6b6b;
+  --color-content-label: #4a4a4a;
+  --color-content-body: #1a1a1a;
+  --color-content-title: #1a1a1a;
+  --color-forms-list-fill-hover: #f0f0f0;
+  --font-family-text: 'Segoe UI', system-ui, sans-serif;
+  --border-radius-smooth: 8px;
+  --border-width-light: 1px;
+}
+
+body.connect-dark {
+  --color-background-fill-0: #1a1a1a;
+  --color-background-fill-1: #2a2a2a;
+  --color-background-fill-2: #333333;
+  --color-background-border-2: #444444;
+  --color-content-caption: #a0a0a0;
+  --color-content-label: #b0b0b0;
+  --color-content-body: #f0f0f0;
+  --color-content-title: #f0f0f0;
+  --color-forms-list-fill-hover: #383838;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-family-text);
+  background: var(--color-background-fill-0);
+  color: var(--color-content-title);
+  line-height: 1.5;
+}
