@@ -61,15 +61,6 @@ export function ThroughputIcon(props: IconProps) {
   );
 }
 
-export function CloseIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  );
-}
-
 const ICONS: Record<IssueKind, (props: IconProps) => JSX.Element> = {
   connectivity: ConnectivityIcon,
   reliability: ReliabilityIcon,

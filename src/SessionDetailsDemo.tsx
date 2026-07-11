@@ -5,16 +5,14 @@ import {
   sortByIssueOrder,
   type SessionDetailsModel,
 } from './demoData';
-import { CloseIcon, ImpactIssueIcon } from './components/ImpactIssueIcons';
+import { ImpactIssueIcon } from './components/ImpactIssueIcons';
 
 interface SessionDetailsDemoProps {
   data?: SessionDetailsModel;
-  onClose?: () => void;
 }
 
 export function SessionDetailsDemo({
   data = SESSION_DETAILS,
-  onClose,
 }: SessionDetailsDemoProps) {
   const impactTypes = sortByIssueOrder(data.impactTypes);
   const kpiGroups = sortByIssueOrder(data.kpiGroups);
@@ -23,14 +21,6 @@ export function SessionDetailsDemo({
     <aside className="an-session-details" aria-label="Session details">
       <header className="an-session-details__header">
         <h2 className="an-session-details__title">Session details</h2>
-        <button
-          type="button"
-          className="an-session-details__close"
-          aria-label="Close session details"
-          onClick={onClose}
-        >
-          <CloseIcon size={18} />
-        </button>
       </header>
 
       <div className="an-session-details__meta">

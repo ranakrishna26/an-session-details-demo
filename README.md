@@ -40,9 +40,8 @@ In Framer, size the Embed to **1106 × 718.5** (or any size with the same ratio)
 1. Metadata block (session ID, site, duration, times)
 2. Impact types with soft-red / soft-yellow chips
 3. Correlated KPIs (Connectivity + Signal)
-4. Close panel / Show session details again
-5. Light / dark theme toggle
-6. Scroll when the viewport is short
+4. Light / dark theme toggle
+5. Scroll when the viewport is short
 
 ## Project layout
 

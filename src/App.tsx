@@ -65,7 +65,6 @@ const panelScale = Math.min(
 export default function App() {
   const initial = useMemo(() => readQuery(), []);
   const [theme, setTheme] = useState<Theme>(initial.theme);
-  const [visible, setVisible] = useState(true);
   const embed = initial.embed;
   const shellRef = useRef<HTMLDivElement>(null);
   const frameScale = useContainScale(
@@ -96,17 +95,7 @@ export default function App() {
           transform: `scale(${panelScale})`,
         }}
       >
-        {visible ? (
-          <SessionDetailsDemo onClose={() => setVisible(false)} />
-        ) : (
-          <button
-            type="button"
-            className="app-shell__show"
-            onClick={() => setVisible(true)}
-          >
-            Show session details
-          </button>
-        )}
+        <SessionDetailsDemo />
       </div>
     </div>
   );
@@ -150,19 +139,7 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <>
-          {visible ? (
-            <SessionDetailsDemo onClose={() => setVisible(false)} />
-          ) : (
-            <button
-              type="button"
-              className="app-shell__show"
-              onClick={() => setVisible(true)}
-            >
-              Show session details
-            </button>
-          )}
-        </>
+        <SessionDetailsDemo />
       )}
     </div>
   );
